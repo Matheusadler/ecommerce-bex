@@ -18,6 +18,7 @@ use App\Http\Controllers\RelatorioController;
 |
 */
 
+Route::match(['get', 'post'], '/', [ProdutoController::class, 'home'])->name('home');
 Route::match(['get', 'post'], '/home', [ProdutoController::class, 'home'])->name('home');
 Route::match(['get', 'post'], '/produto', [ProdutoController::class, 'index'])->name('produto');
 Route::match(['get', 'post'], '/venda', [VendaController::class, 'index'])->name('venda');
